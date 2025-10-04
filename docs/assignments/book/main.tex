@@ -1,11 +1,17 @@
+% !TeX root=main.tex
+% !TeX TS-program = XeLaTeX
+% !TEX spellcheck = fa
 % This is a book template AUT publications
 %
 %
 % Author: Morteza Zakeri
+% 2025 10 04
 
 \documentclass[11pt]{IUST-Book}
 \usepackage{commandx}
-
+\input{settings-glossary}
+\input{acronym}
+\input{glossary}
 \makeindex
 
 
@@ -13,7 +19,9 @@
 
 \title{
 {\titlefont
-		بازسازی برای اسمل‌های طراحی نرم‌افزار\\مدیریت قرض فنی
+بازسازی برای اسمل‌های طراحی نرم‌افزار
+\\
+مدیریت قرض فنی
 }
 }
 %\subtitle{مدیریت قرض فنی}
@@ -34,15 +42,14 @@
 
 
 \begin{document}
-\abovedisplayshortskip=10pt
-\belowdisplayshortskip=8pt
+%\abovedisplayshortskip=10pt
+%\belowdisplayshortskip=8pt
 % فاصله عمودی قبل و بعد از فرمول‌ها با این دستور تعیین می‌شود.
 % ===================================== Front Matter
 \frontmatter
 \pagestyle{empty}
-
-
 \maketitle
+
 
 
 
@@ -60,12 +67,7 @@
 %\include{./chapters/preface1}
 \end{spacing}
 
-\renewcommand{\glossarypreamble}{\begin{multicols*}{2}}
-\renewcommand{\glossarypostamble}{\end{multicols*}}
 
-\begin{singlespace}
-%\printglossary[style=notation,type=symb]
-\end{singlespace}
 
 % =================================== Main Matter
 \mainmatter
@@ -87,20 +89,10 @@
 \begin{singlespace}
 %\DefaultMathsDigits
 \small
-{
 \bibliographystyle{plain-fa}
 \bibliography{biblio}
-}
-
-%
-\renewcommand{\glossarypreamble}{}
-\renewcommand{\glossarypostamble}{}
-\printglossary[style=listdotpage,type=main]
-\renewcommand{\glsnamefont}[1]{\textrm{\latinfont #1}}
-\renewcommand{\glossarypreamble}{\setLTR\DefaultMathsDigits}
-\renewcommand{\glossarypostamble}{\setRTL\AutoMathsDigits}
-\printglossary[style=listpagedot, type=dicep]
-
+\printacronyms
+\printglossary %Glossary and index %
 \printindex
 \end{singlespace}
 
