@@ -1,0 +1,108 @@
+% This is a book template AUT publications
+%
+%
+% Author: Morteza Zakeri
+
+\documentclass[11pt]{IUST-Book}
+\usepackage{commandx}
+
+\makeindex
+
+
+
+
+\title{
+{\titlefont
+		بازسازی برای اسمل‌های طراحی نرم‌افزار\\مدیریت قرض فنی
+}
+}
+%\subtitle{مدیریت قرض فنی}
+\booktitle{بازآرایی}
+
+\author{
+\lr{Girish Suryanarayana} 
+\and \lr{Ganesh Samarthyam} 
+\and \lr{Tushar Sharma}
+}
+
+
+\translator{مرتضی ذاکری}
+\position{استادیار}
+\affiliation{دانشگاه صنعتی امیرکبیر}
+\date{\today}
+
+
+
+\begin{document}
+\abovedisplayshortskip=10pt
+\belowdisplayshortskip=8pt
+% فاصله عمودی قبل و بعد از فرمول‌ها با این دستور تعیین می‌شود.
+% ===================================== Front Matter
+\frontmatter
+\pagestyle{empty}
+
+
+\maketitle
+
+
+
+
+% ===================================== Table of Contents and List of Figures & Notations
+\pagestyle{plain}
+%دستوری برای اینکه کشیدگی در کلمات ایجاد نشود:
+%\KashidaOff
+
+\setcounter{tocdepth}{2}
+\begin{spacing}{1.2}
+\pagenumbering{adadi}
+\tableofcontents
+%\listoffigures
+%\include{./chapters/preface1}
+\end{spacing}
+
+\renewcommand{\glossarypreamble}{\begin{multicols*}{2}}
+\renewcommand{\glossarypostamble}{\end{multicols*}}
+
+\begin{singlespace}
+%\printglossary[style=notation,type=symb]
+\end{singlespace}
+
+% =================================== Main Matter
+\mainmatter
+\pagestyle{fancy}
+%دستوری برای اینکه کشیدگی در کلمات ایجاد شود:
+%\KashidaOn
+
+% =================================== Chapters
+\include{chapters/foreword1}
+\include{chapters/foreword2}
+\include{preface}
+\include{acknowledgments}
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+
+% ==================================== Back Matter: Bibliography & Glossaries
+
+
+\begin{singlespace}
+%\DefaultMathsDigits
+\small
+{
+\bibliographystyle{plain-fa}
+\bibliography{biblio}
+}
+
+%
+\renewcommand{\glossarypreamble}{}
+\renewcommand{\glossarypostamble}{}
+\printglossary[style=listdotpage,type=main]
+\renewcommand{\glsnamefont}[1]{\textrm{\latinfont #1}}
+\renewcommand{\glossarypreamble}{\setLTR\DefaultMathsDigits}
+\renewcommand{\glossarypostamble}{\setRTL\AutoMathsDigits}
+\printglossary[style=listpagedot, type=dicep]
+
+\printindex
+\end{singlespace}
+
+
+\end{document}
