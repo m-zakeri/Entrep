@@ -1,4 +1,4 @@
-# Fundamentals of Computer and Programming Course
+# Entrepreneurship for Computer Scientists and Engineers
 
 ![C-how-to-program-9-e-book-cover](assets/figs/c-how-to-program-9-e-book-cover.jpg){ width="150"  align=right loading=lazy}
 
