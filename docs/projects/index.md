@@ -1,11 +1,11 @@
 # Projects
 
+Below are the project files for this course:
 
-### Spring 2025
-* [Proposal for Spring 2025](#){ target="_blank" }
+1. [M1.pdf](M1.pdf)
+2. [Initial idea registration form.pdf](Initial_idea_registration_form.pdf)
+3. [Market Research Form.pdf](Market_Research_Form.pdf)
+3. [Market Research Form.docx](Market_Research_Form.docx)
 
 
-### Spring 2024
-
-* [Proposal for Spring 2024](final_project.pdf){ target="_blank" }
-
+---
