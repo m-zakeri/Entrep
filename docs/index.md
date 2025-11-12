@@ -1,6 +1,6 @@
 # Entrepreneurship for Computer Scientists and Engineers
 
-![Entrepreneurship](assets/figs/entrep_main.png){ width="150"  align=right loading=lazy }
+![Entrepreneurship](assets/figs/entrep_main.jpg){ width="150"  align=right loading=lazy}
 
 Our course, **"Entrepreneurship for Computer Scientists and Engineers,"** at [Amirkabir University of Technology](http://ce.aut.ac.ir){ target="_blank" } explores how computer scientists and engineers can transform innovative ideas into sustainable ventures. The course blends **theory and practice**, covering the fundamentals of startup creation, business model design, market validation, and value creation in technology-driven environments.  
 Students learn how to form teams, identify market opportunities, develop Minimum Viable Products (MVPs), and navigate the challenges of building scalable, ethical, and impactful startups.
