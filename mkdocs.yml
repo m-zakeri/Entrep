@@ -132,11 +132,10 @@ markdown_extensions:
 nav:
     - Home: index.md
     - Announcements: announcements/index.md
-    - Calendar: calendar/index.md
+    - Calendar and Events: calendar/index.md
     - Lectures: lectures/index.md
     - Assignments: assignments/index.md
     - Projects: projects/index.md
-    - Problems: problems/index.md
     - Blog: blog/index.md
     - Issue Tracker: 'https://github.com/m-zakeri/Entrep/issues'
 
