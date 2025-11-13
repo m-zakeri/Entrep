@@ -1,0 +1,12 @@
+
+\makeatletter
+\newcommandx{\newgloss}[5][3, 5]{\@ifempty{#3}{\newglossaryentry{g:#1} {name={#2},description=\lr{#4}}} {\newglossaryentry{g:#1}{name={#2},description=\lr{#4},sort=#3}}
+	\@ifempty{#5}{\newglossaryentry{ep:#1}{type=dicep,name={#4},description=\rl{#2}}} {\newglossaryentry{ep:#1}{type=dicep,name={#4},description=\rl{#2},sort=#5}}}
+%
+\newcommandx{\newnotation}[4][3]{\@ifempty{#3}{\newglossaryentry{#1}{type=symb,name={#2},description={#4}}} {\newglossaryentry{#1}{type=symb,name={#2},description={#4},sort=#3}}}
+\makeatother
+%
+\newgloss{wg}{گراف~وزن‌دار}{weighted graph}
+\newgloss{kcon}{$k$-همبند}[ک-همبند]{$k$-connected}[k-connected]
+%===================== Notations
+\newnotation{n:cG}{$\mathcal{C}(G)$}[C(G)]{خانواده گراف‌های همبند}
