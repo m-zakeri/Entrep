@@ -42,35 +42,69 @@ By the end of the course, students will be able to:
 - Entrepreneurship vs. management  
 - The entrepreneurial mindset  
 
+
 ### 2. Founding Team Dilemmas
 - Passion and motivation for founders  
 - Solo vs. team founding  
 - The “Three Rs” framework: Relationships, Roles, Rewards  
 - Equity splits and decision-making structures  
 
+
 ### 3. Market Segmentation and Research
 - Brainstorming potential markets and customers  
 - Building the **Market Segmentation Matrix**  
 - Conducting primary and secondary research  
-- Selecting the **Beachhead Market** and calculating TAM  
+- Selecting the **Beachhead Market** 
+- Calculating total addressable market (TAM)
 
-### 4. Business Models and Pricing Frameworks
+
+### 4. Idea Generation
+- Morphological box
+- Design thinking
+- Other thinking methods
+
+
+### 5. Business Models and Pricing Frameworks
 - Types of business models (transactional, subscription, freemium, franchise, etc.)  
 - Designing a **value capture strategy**  
 - Dynamic pricing frameworks and real-world examples  
 - Balancing customer acquisition and profitability  
 
-### 5. MVP Development and Validation
+
+### 6. Engineering Economics
+- Time Value of Money
+- Simple and Compound Interests
+- Cash Flow Diagrams
+- Technique of Equivalence
+- Unit Economics
+
+
+### 7. Business KPIs
+- Lifetime value (LTV) of an acquired customer
+- Cost of Customer Acquisition (CoCA)
+- Conversion and churn rates
+- Net Promoter Score 
+
+
+### 8. Finance, Accounting, Growth, and Exit
+- Funding sources and venture capital  
+- Engines of growth: viral, paid, sticky  
+- Understanding financial statements  
+- Exit strategies: acquisition, IPO, or continuation 
+
+
+### 9. MVP Development and Validation
 - The Lean Startup methodology  
 - Prototyping and early testing  
 - Metrics for product–market fit  
 - Iterating through feedback loops  
 
-### 6. Finance, Growth, and Exit
-- Funding sources and venture capital  
-- Engines of growth: viral, paid, sticky  
-- Understanding financial statements  
-- Exit strategies: acquisition, IPO, or continuation  
+ 
+### 10. Business Plan and Pitch Deck
+- Writing business plans 
+- Pitch deck presentations
+- Elevator pitch
+- Marketing
 
 ---
 
@@ -116,13 +150,14 @@ By the end of the course, students will be able to:
 ### Main References
 
 1. Bill Aulet, *Disciplined Entrepreneurship: 24 Steps to a Successful Startup*, 2024.  
-2. Noam Wasserman, *The Founder’s Dilemmas*, 2012.  
+2. Noam Wasserman, *The Founders' Dilemmas*, 2012.  
 3. Eric Ries, *The Lean Startup*, 2011.  
 4. Peter Thiel, *Zero to One*, 2014.  
-5. Eric Schmidt & Jonathan Rosenberg, *How Google Works*, 2014.  
+5. Eric Schmidt and Jonathan Rosenberg, *How Google Works*, 2014.  
 6. Laszlo Bock, *Work Rules!*, 2015.  
 
 ---
+
 
 ## Resources
 
