@@ -8,9 +8,12 @@ Below are the lecture files for this course (in PDF format):
 - :fontawesome-solid-file-pdf: [Lecture 4: Business Models and Pricing Frameworks](files/Lecture4_Business-Models-and-Pricing-Frameworks.pdf)
 - :fontawesome-solid-file-pdf: [Lecture 5: Lifetime Value (LTV)](files/Lecture5-Lifetime_Value_LTV.pdf)
 - :fontawesome-solid-file-pdf: [Lecture 6: Cost of Customer Acquisition (CoCA)](files/Lecture6_Cost_of_Customer_Acquisition_CoCA.pdf)
-- :fontawesome-solid-file-pdf: [Lecture 7: Financial Intelligence](#)
-- :fontawesome-solid-file-pdf: [Lecture 8: Lean Methodology and MVP](#)
-- :fontawesome-solid-file-pdf: [Lecture 9: Business Plan and Pitch Deck](#)
+- :fontawesome-solid-file-pdf: [Lecture 7: Financial Intelligence Part1](files/Lecture7_Financial-Intelligence_Part_I.pdf)
+- :fontawesome-solid-file-pdf: [Lecture 7: Financial Intelligence Part2](files/Lecture7_Financial-Intelligence_Part_II.pdf)
+- :fontawesome-solid-file-pdf: [Lecture 7: Financial IntelligencePart3](files/Lecture7_Financial-Intelligence_Part_III.pdf)
+
+- :fontawesome-solid-file-pdf: [Lecture 8: Lean Methodology and MVP](files/Lecture8_The-Lean-Approach.pdf)
+- :fontawesome-solid-file-pdf: [Lecture 9: Business Plan and Pitch Deck](files/Lecture9_Business_Plan_and_Pitch_Deck.pdf)
 - To be completed...
 
 ---
