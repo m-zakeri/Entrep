@@ -1,0 +1,197 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{commandx}
+
+
+
+%===================================== PDF setup
+\hypersetup{
+	pdftitle={بازسازی برای اسمل‌های طراحی نرم‌افزار},
+	pdfauthor={مرتضی ذاکری},
+	pdfsubject={Software Engineering},
+	pdfkeywords={Software Engineering, Design Smells},
+	pdfdirection={R2L}
+}
+
+%====================================================== XePersian
+%\usepackage[Kashida]{xepersian}
+%\usepackage[extrafootnotefeatures]{xepersian}
+\usepackage{xepersian}
+
+\settextfont[Path={./font/Niloofar/}, BoldFont={XBNiloofarBd.ttf}, ItalicFont={XBNiloofarIt.ttf}, BoldItalicFont={XBNiloofarBdIt.ttf}, Scale=1.05]{XBNiloofar.ttf}
+
+\setlatintextfont[Scale=0.90]{Times New Roman}
+
+
+
+%-----------------
+%% https://github.com/persiantex/xepersian/issues/17
+% this is a temporary fix as stated in https://github.com/persiantex/xepersian/issues/17#issuecomment-709956867
+\ExplSyntaxOn
+\cs_set_eq:NN
+\etex_iffontchar:D
+\tex_iffontchar:D
+\cs_undefine:N \c_one
+\int_const:Nn \c_one { 1 } 
+\ExplSyntaxOff
+%-----------------
+% چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید
+%\setdigitfont[Path={./font/Zar/}, BoldFont={XBZarBd.ttf}, ItalicFont={XBZarIt.ttf}, BoldItalicFont={XBZarBdIt.ttf}, Scale=1.0]{XBZar.ttf}
+\setmathdigitfont[Path={./font/Zar/}, BoldFont={XBZarBd.ttf}, ItalicFont={XBZarIt.ttf}, BoldItalicFont={XBZarBdIt.ttf}, Scale=1.0]{XBZar.ttf}
+
+% اگر می‌خواهید که اعداد با فونت یکان نمایش داده شوند خط بالا را غیر فعال کرده و خط زیر را فعال کنید.
+
+%\setdigitfont[Path={./font/Yekan/}, BoldFont={XMYekanBd.ttf}, ItalicFont={XMYekanIt.ttf}, BoldItalicFont={XMYekanBdIt.ttf}, Scale=1.0]{XMYekan.ttf}%{Persian Modern}
+
+% تعریف قلم‌های فارسی و انگلیسی برای استفاده در بعضی از قسمت‌های متن
+\defpersianfont\niloofar[Path={./font/Niloofar/}, BoldFont={XBNiloofarBd.ttf}, ItalicFont={XBNiloofarIt.ttf}, BoldItalicFont={XBNiloofarBdIt.ttf}, Scale=1.0]{XBNiloofar.ttf}
+
+\defpersianfont\zar[Path={./font/Zar/}, BoldFont={XBZarBd.ttf}, ItalicFont={XBZarIt.ttf}, BoldItalicFont={XBZarBdIt.ttf}, Scale=1.0]{XBZar.ttf}
+
+\defpersianfont\yagut[Path={./font/Yagut/}, BoldFont={XBYagutBd.ttf}, ItalicFont={XBYagutIt.ttf}, BoldItalicFont={XBYagutBdIt.ttf}, Scale=1.0]{XBYagut.ttf}
+
+\defpersianfont\titlefont[Path={./font/Titre/}, BoldFont={XBTitreShadow.ttf}, ItalicFont={XBTitreIt.ttf}, BoldItalicFont={XBTitreShadowIt.ttf}, Scale=1.0]{XBTitre.ttf}
+
+\defpersianfont\iranic[Path={./font/Zar/XBZarOblique/}, BoldFont={XBZarObliqueBd.ttf}, Scale=1.10]{XBZarOblique.ttf}
+
+\defpersianfont\nastaliq[Path={./font/IranNastaliq/}, Scale=1.50]{IranNastaliq.ttf}
+
+
+
+
+
+
+
+
+
+
+\titleformat{\chapter}[display]
+{\normalfont\Huge\bfseries\centering}
+  {\thechapter}{1em}{\RTL} % prepend \RTL to the title body
+
+
+
+% ===========================================Headers and Footers
+\pagestyle{fancy} 
+\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\headrule}{\vspace{4pt} 
+%\color{black}\hrule width \textwidth height 1pt}
+\renewcommand{\chaptermark}[1]
+{\markboth{%\chaptername\ \thechapter. 
+		#1}{\@booktitle}}
+\renewcommand{\sectionmark}[1]{}
+\fancyhf{}
+%\fancyhead[RE,LO]{{\small \thepage}}
+
+\fancyhead[LE]{{\RTL \thepage\ \hrulefill\ \rightmark}}
+\fancyhead[LO]{{\RTL \leftmark\ \hrulefill\ \thepage}}
+
+
+
+%======================================== Table of Contents
+\titlecontents{chapter}[3pc] 
+{\color{black}\addvspace{.8pc}\large\bfseries \filleft}
+{\color{black}\contentslabel
+[{\chaptername}
+\thecontentslabel]{3.7pc}} 
+{\color{black}}{\color{black}\hfill\contentspage} 
+[\addvspace{.5pc}]
+%
+\titlecontents{section}[4pc]{\addvspace{2pt}\filleft} 
+{\contentslabel[\thecontentslabel\ ]{2.4pc}} 
+{}{\dotfill \contentspage}
+\titlecontents{subsection}[6pc]{\filleft} 
+{\small \contentslabel{3pc}} 
+{}{\dotfill \contentspage}
+%
+
+%====================================================== Environments
+%  تعریف نام و عنوان محیط‌های ریاضی مثل قضیه، لم، گزاره، مثال و غیره توسط این دستورها انجام می‌شود.
+
+\SepMark{-} 
+\swapnumbers\newtheorem{definition}{تعریف}[chapter]
+\swapnumbers\theoremstyle{definition}
+\swapnumbers\newtheorem{thm}[definition]{قضیه}
+\renewcommand{\listfigurename}{فهرست تصاوير}
+\renewcommand{\proofname}{\textbf{اثبات}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\renewcommand{\bibname}{مراجع}
+
+%\renewcommand{\translator}{ترجمه}
+
+\newcommand{\sectionname}{بخش}
+\newcommand{\theoremname}{قضیه}
+\newcommand{\lemmaname}{لم}
+\newcommand{\propositionname}{گزاره}
+\newcommand{\corollaryname}{نتیجه}
+\newcommand{\conjecturename}{حدس}
+\newcommand{\definitionname}{تعریف}
+\newcommand{\examplename}{مثال}
+\newcommand{\notationname}{نماد}
+\newcommand{\remarkname}{ملاحظه}
+\newcommand{\theoremenv}{thm}
+\newcommand{\lemmaenv}{lem}
+\newcommand{\propositionenv}{prop}
+\newcommand{\corollaryenv}{cor}
+\newcommand{\conjectureenv}{con}
+\newcommand{\definitionenv}{dfn}
+\newcommand{\exampleenv}{exm}
+\newcommand{\notationenv}{notation}
+\newcommand{\remarkenv}{rem}
+
+%
+\newcounter{theorem}[chapter]
+\newcommand{\environ}[2]{\vspace{2pt} \refstepcounter{theorem}\par\noindent \textbf{\hboxR{#1}}\textbf{\hboxR{#2}}-\space}
+\newcommand{\closeenviron}{\par\vspace{2pt}}
+%\newenvironment{\theoremenv}[1][]{\environ{\theoremname}{#1}\itshape}{\closeenviron}
+\newenvironment{\lemmaenv}[1][]{\environ{\lemmaname}{#1}\itshape}{\closeenviron}
+\newenvironment{\propositionenv}[1][]{\environ{\propositionname}{#1}\itshape}{\closeenviron}
+\newenvironment{\corollaryenv}[1][]{\environ{\corollaryname}{#1}\itshape}{\closeenviron}
+\newenvironment{\conjectureenv}[1][]{\environ{\conjecturename}{#1}\itshape}{\closeenviron}
+\newenvironment{\definitionenv}[1][]{\environ{\definitionname}{#1}\rm}{\hspace*{\fill} $\blacktriangle$ \closeenviron}
+\newenvironment{\exampleenv}[1][]{\environ{\examplename}{#1}\rm}{\hspace*{\fill} $\blacktriangle$ \closeenviron}
+\newenvironment{\notationenv}[1][]{\environ{\notationname}{#1}\rm}{\hspace*{\fill} $\blacktriangledown$ \closeenviron}
+\newenvironment{\remarkenv}[1][]{\environ{\remarkname}{#1}\rm}{\hspace*{\fill} $\blacklozenge$ \closeenviron}
+%
+%====================================================== Counters
+\numberwithin{equation}{chapter}
+\def\thesection{\arabic{section}-\thechapter}
+\def\thesubsection{\arabic{subsection}-\thesection}
+\def\theequation{\arabic{equation}-\thechapter}
+\def\thetheorem{\arabic{theorem}-\thechapter}
+\def\thefigure{\arabic{figure}-\thechapter}
+\def\thetable{\arabic{table}-\thechapter}
+
+
+
+
+
+%====================================================== Pretty References
+\newcommand\pref[1]{\prettyref{#1}}
+\newrefformat{chp}{\chaptername~\ref{#1}}
+\newrefformat{sec}{\sectionname~\ref{#1}}
+\newrefformat{app}{\appendixname~\ref{#1}}
+\newrefformat{thm}{\theoremname~\ref{#1}}
+\newrefformat{lem}{\lemmaname~\ref{#1}}
+\newrefformat{cor}{\corollaryname~\ref{#1}}
+\newrefformat{con}{\conjecturename~\ref{#1}}
+\newrefformat{prop}{\propositionname~\ref{#1}}
+\newrefformat{dfn}{\definitionname~\ref{#1}}
+\newrefformat{not}{\notationname~\ref{#1}}
+\newrefformat{exm}{\examplename~\ref{#1}}
+\newrefformat{rem}{\remarkname~\ref{#1}}
+\newrefformat{fig}{\figurename~\ref{#1}}
+\newrefformat{tbl}{\tablename~\ref{#1}}
+
+%====================================================== Acronyms
+\newcommand\marg[1]{\mbox{}\marginpar[\raggedleft\hspace{0pt}{\footnotesize\color{black} #1}]{\raggedright\hspace{0pt}{\footnotesize\color{black} #1}}}
+
+
+
+% ===================================================== Main body
+\onehalfspacing
+\allowdisplaybreaks[1]
+% اجازه برای شکستن صفحه در وسط محیط ریاضی
+\textwidthfootnoterule
+
+%====================================================== End of file `commandx.sty'
